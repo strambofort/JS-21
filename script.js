@@ -1,3 +1,4 @@
+"use strict";
 let title = "Project";
 console.log(typeof title);
 let screens = "Простые, Сложные, Интерактивные";
@@ -9,7 +10,7 @@ let adaptive = true;
 console.log(typeof adaptive);
 console.log(screens.length);
 let cost = "Стоимость верстки экранов ";
-let currency = " рублей / долларов / гривен / юани";
+let currency = " рублей";
 console.log(cost + screenPrice + currency);
 let sitePrice = "Стоимость разработки сайта ";
 console.log(sitePrice + fullPrice + currency);
