@@ -21,31 +21,24 @@ console.log(cash + (fullPrice * (rollback / 100)));
 
 title = prompt("Как называется ваш проект?");
 screens = prompt("Какие типы экранов нужно разработать?", "Простые или Сложные или Интерактивные");
-screenPrice = prompt("Сколько будет стоить данная работа?");
-adaptive = window.confirm("Нужен ли адаптив на сайте?");
-if (adaptive) {
-  adaptive = true;
-}
-else {
-}
+screenPrice = +prompt("Сколько будет стоить данная работа?");
+adaptive = confirm("Нужен ли адаптив на сайте?");
+
 console.log(adaptive);
 let service1 = prompt("Какой дополнительный тип услуги нужен?");
-let servicePrice1 = prompt("Сколько это будет стоить?");
+let servicePrice1 = +prompt("Сколько это будет стоить?");
 let service2 = prompt("Какой дополнительный тип услуги нужен?");
-let servicePrice2 = prompt("Сколько это будет стоить?");
+let servicePrice2 = +prompt("Сколько это будет стоить?");
 fullPrice = Number(screenPrice) + Number(servicePrice1) + Number(servicePrice2);
 let servicePercentPrice = Math.ceil(fullPrice - (fullPrice * (rollback / 100)));
 console.log(servicePercentPrice);
 console.log(fullPrice);
 if (fullPrice >= 30000) {
-  alert("Даем скидку в 10%");
-}
-if (fullPrice >= 15000 && fullPrice <= 30000) {
-  alert("Даем скидку в 5%");
-}
-if (fullPrice <= 15000 && fullPrice > 0) {
-  alert("Скидка не предусмотрена");
-}
-if (fullPrice < 0) {
-  alert("Что то пошло не так");
+  console.log("Даем скидку в 10%");
+} else if (fullPrice >= 15000 && fullPrice < 30000) {
+  console.log("Даем скидку в 5%");
+} else if (fullPrice < 15000 && fullPrice > 0) {
+  console.log("Скидка не предусмотрена");
+} else {
+  console.log("Что то пошло не так");
 }
